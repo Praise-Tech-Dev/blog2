@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// const url_base = 'https://fivic73350.pythonanywhere.com/blogs/'
-const url_base ='https://sonisoh347.pythonanywhere.com/blogs/'
+const url_base = 'https://fivic73350.pythonanywhere.com/blogs/'
+// const url_base ='https://sonisoh347.pythonanywhere.com/blogs/'
 
 const getAllBlog = async () => {
     return await axios.get(url_base)
@@ -12,7 +12,7 @@ const getSingleBlog = async (id) => {
 }
 
 const addNewBlog = async (payload) => {
-    return await axios.post(`${url_base}/${id}/`, payload)
+    return await axios.post(`${url_base}`, payload)
 }
 
 const editBlog = async (payload, id) => {

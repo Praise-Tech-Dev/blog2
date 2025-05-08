@@ -26,6 +26,7 @@ export default function Edit() {
   }
 
   const handleSubmit = async (e) => {
+    setLoading(true)
     e.preventDefault()
     const payload = {
       img: imageUrl,

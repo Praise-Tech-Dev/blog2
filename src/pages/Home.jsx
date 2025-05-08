@@ -42,6 +42,7 @@ export default function Home() {
             newsData.map((my_data, index) => {
                 return (
                     <BlogComponents
+                    key={my_data.id}
                         data={my_data} 
                     />
                 )

@@ -39,7 +39,7 @@ export default function Add() {
                     <input type="text" onChange={(e) => setTitle(e.target.value)} value={title} placeholder='Enter the new title for your news' className='border-[1px] border-white p-4 mt-7' />
                     <input type="text" onChange={(e) => setContent(e.target.value)} value={content} placeholder='Enter the content for the news'   className='border-[1px] border-white p-4 mt-7 h-[100px]'/>
                     <input type="text" onChange={(e) => setAuthor(e.target.value)} value={author}  placeholder='Enter the author for the news' className='border-[1px] border-white p-4 mt-7' />
-                    <button onClick={(e) =>submitForm(e)}className='bg-blue-600 hover:bg-blue-500 rounded-4xl p-3 text-[16px] mt-7 '>Submit</button>
+                    <button onClick={(e) =>submitForm(e)} className='bg-blue-600 hover:bg-blue-500 rounded-4xl p-3 text-[16px] mt-7'>Submit</button>
                 </form>
             </div>
         </div>

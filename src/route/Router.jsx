@@ -2,10 +2,12 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from '../pages/Home'
 import SingleBlog from '../pages/SingleBlog'
-import Login from '../pages/Login'
-import SignUp from '../pages/SignUp'
+import SignUp from '../pages/auth/SignUp'
+import Sections from './layout/Sections'
+import AuthLayout from './layout/AuthLayout'
 import Edit from '../pages/Edit'
 import Add from '../components/Add'
+import Login from '../pages/auth/Login'
 
 export default function Router() {
   return (
@@ -14,10 +16,16 @@ export default function Router() {
         <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/single/:id' element={<SingleBlog />}/>
-            <Route path='single/:id/edit' element={<Edit/>}/>
-            <Route path='/login' element={<Login/>}/>
-            <Route path='/signup' element={<SignUp/>}/>
-            <Route path='/add' element={<Add/>}/>
+            <Route path='/' element={<Sections/>}>
+              <Route path='single/:id/edit' element={<Edit/>}/>
+              <Route path='/add' element={<Add/>}/>
+            </Route>
+            <Route path='/auth' element={<AuthLayout/>}>
+              <Route path='login' element={<Login/>}/>
+              <Route path='signup' element={<SignUp />}/>
+            </Route>
+            
+            
         </Routes>
       </BrowserRouter>
     </div>
